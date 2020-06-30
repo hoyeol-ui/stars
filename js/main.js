@@ -102,33 +102,39 @@ $(function(){
 
             $('.sec2_box1').mouseover(function(){
               $('.sec2_txt1_on').show()
+              $('.img1_off').hide()
               $('.sec2_box1 > .sec2_btn').css({'background-color':'#ef4b49','color':'#fff'})
               $('.sec2_box1 > .sec2_txt1_on').css({'display':'block'})
             });
 
             $('.sec2_box1').mouseleave(function(){
               $('.sec2_txt1_on').hide()
+              $('.img1_off').show()
               $('.sec2_box1 > .sec2_btn').css({'background-color':'white','color':'#333'})
               $('.sec2_box1 > .sec2_txt1_on').css({'display':'none'})
             });
 
             $('.sec2_box2').mouseover(function(){
               $('.sec2_txt2_on').show()
+              $('.img2_off').hide()
               $('.sec2_box2 > .sec2_btn').css({'background-color':'#ef4b49','color':'#fff'})
             });
 
             $('.sec2_box2').mouseleave(function(){
               $('.sec2_txt2_on').hide()
+              $('.img2_off').show()
               $('.sec2_box2 > .sec2_btn').css({'background-color':'white','color':'#333'})
             });
 
             $('.sec2_box3').mouseover(function(){
               $('.sec2_txt3_on').show()
+              $('.img3_off').hide()
               $('.sec2_box3 > .sec2_btn').css({'background-color':'#ef4b49','color':'#fff'})
             });
 
             $('.sec2_box3').mouseleave(function(){
               $('.sec2_txt3_on').hide()
+              $('.img3_off').show()
               $('.sec2_box3 > .sec2_btn').css({'background-color':'white','color':'#333'})
             });
 
