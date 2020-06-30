@@ -231,12 +231,14 @@ background-color: rgba(207, 18, 18, 0.8);
   width: 250px;
   display: none;
  }
-#section2 div a:hover .text_on{
-  display: block;/* opacity:1 애는 자리차지해서 margin을 쓴 것 처럼되서 조심해서 쓰자*/
+#section2 div a:hover h5{
+  display: none;/* opacity:1 애는 자리차지해서 margin을 쓴 것 처럼되서 조심해서 쓰자*/
 }
 #section2 div a:hover .img_box{
   display: block;
   width: 100%;
+  height: 300px;
+  background-image: url(../images/news1-1.jpg);
 }
 #section2 div a:hover .text_off, #section2 div a:hover .img_off{
   display: none;
@@ -521,16 +523,18 @@ background-color: rgba(207, 18, 18, 0.8);
   position: absolute;
   top:-80px;
   z-index:9999;
-  width:64px;
-  height:64px;
+  width:50px;
+  height:50px;
   display:block;
   text-indent:-9999px;}
 .regular2 .slick-prev{
   left:30px;
-  background-image: url(../images/arrow_l.png);}
+  background-image: url(../images/arrow_l.png);
+  background-size: cover;}
 .regular2 .slick-next{
   left:130px;
   right:auto;
+  background-size: cover;
   background-image: url(../images/arrow_r.png);}
 /* !important(제이쿼리, css 다 이기는 태그지만 가급적 사용하지 않도록 하자) */
 
