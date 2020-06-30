@@ -5,7 +5,9 @@ $(function(){
     $(".lazy").slick({
         dots: true,
         lazyLoad: 'ondemand', // ondemand progressive anticipated
-        infinite: true
+        infinite: true,
+        autoplay:true,
+        autoplaySpeed:3000,
       });
 
 
@@ -13,7 +15,9 @@ $(function(){
         dots: true,
         infinite: true,
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        autoplay:true,
+        autoplaySpeed:3000,
       });
 
 
@@ -22,8 +26,9 @@ $(function(){
         dots: false,
         infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 2
-        
+        slidesToScroll: 2,
+        autoplay:true,
+        autoplaySpeed:3000,
       });
 
 
