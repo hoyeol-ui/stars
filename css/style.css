@@ -565,10 +565,10 @@ text-align: center;
   z-index: 99999;}
 .slick-prev{
   left: 50px;
-  background-image: url(../images/arrow_l.png);
+  background-image: url(../images/arrow_l2.png);
 } 
 .slick-next{
-  background-image: url(../images/arrow_r.png);
+  background-image: url(../images/arrow_r2.png);
   right: 50px;
 } 
 .slick-dots{position: absolute;
@@ -623,13 +623,13 @@ text-align: center;
 .regular div{z-index: 99999;} 
   
 .regular .slick-prev{
-    left: -25px;
-    background-image: url(../images/arrow_l.png);
+    left: -58px;
+    background-image: url(../images/arrow_l2.png);
     z-index: 1;
   } 
 .regular .slick-next{
-    background-image: url(../images/arrow_r.png);
-    right: -25px;
+    background-image: url(../images/arrow_r2.png);
+    right: -58px;
     z-index: 1;
   } 
 
@@ -653,14 +653,14 @@ text-align: center;
   display:block;
   text-indent:-9999px;}
 .regular2 .slick-prev{
-  left:30px;
-  background-image: url(../images/arrow_l.png);
+  left:40px;
+  background-image: url(../images/arrow_l2.png);
   background-size: cover;}
 .regular2 .slick-next{
-  left:130px;
+  left:100px;
   right:auto;
   background-size: cover;
-  background-image: url(../images/arrow_r.png);}
+  background-image: url(../images/arrow_r2.png);}
 /* !important(제이쿼리, css 다 이기는 태그지만 가급적 사용하지 않도록 하자) */
 
 
