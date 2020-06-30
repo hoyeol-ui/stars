@@ -47,6 +47,12 @@ h3{font-size:1rem;}
   height:200px;
   display: block;}
 .popup img{width:100%}
+.sitemap{
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  right: 40px;
+}
 .sitemap_div{width:100%;min-width:1024px;}
 .site_full{
   position:fixed;
@@ -54,10 +60,15 @@ h3{font-size:1rem;}
   height:100%;
   width:100%;
   background:rgba(0,0,0,0.8);
-  z-index:10;
+  z-index:99999999999;
   display: none;
   font-size: 5rem;
+}
 
+.popup_open{
+  width: 120px;
+  background-color: rgb(230, 230, 230);
+  color: #000;
 }
 
 
@@ -65,9 +76,9 @@ h3{font-size:1rem;}
   width: 100px;
   height: 200px;
   position: fixed; 
-  right: 150px;
+  right: 1px;
   top: 300px; 
-  z-index: 99999;}
+  z-index: 1;}
 
 #quick ul{
 width: 100px;
@@ -75,15 +86,20 @@ height: 500px;
 text-align: center;
 list-style: none; 
 margin-bottom: 15px;
-background-color: rgba(207, 18, 18, 0.8);
+color: #fff;
+background-color: rgb(11, 74, 190);
        }
 #quick ul li{
  padding: 24px 10px;
  font-size: 1.1rem;
- font-weight: 800;
- background-color: rgba(207, 18, 18, 0.8);}
+ font-weight: 800;}
 
-#quick ul li:last-child{padding: 35px 10px;}
+#quick ul li:last-child{
+  padding: 35px 10px;}
+#quick ul li img{
+  width: 50px;
+  height: 50px;
+}
 
 /*********************header****************************/
 
@@ -102,6 +118,7 @@ background-color: rgba(207, 18, 18, 0.8);
 #header .language {
                    display: inline-block;
                    position: relative;
+                   right: 30px;
                    width:11rem;
                    height: 2rem;
                    text-align: center;/**/
@@ -122,7 +139,7 @@ background-color: rgba(207, 18, 18, 0.8);
 }
 #header .korean{
   float: left;
-  padding-left: 37%;
+  padding-left: 33%;
   line-height: 2rem;
   background: none;
   font-size: 1rem;
@@ -184,6 +201,7 @@ background-color: rgba(207, 18, 18, 0.8);
 #section1{
   width: 100%;
   position: relative;
+  z-index: 9999999;
 }
 
 #section1 .lazy div{
@@ -440,10 +458,7 @@ background-color: rgba(207, 18, 18, 0.8);
   padding-bottom: 200px;
   width: 100%;
 }
-
-.youtube{
-  margin-left: 20%;
-}
+#section5 iframe{z-index: 999999;}
 
 #section6{
   float: left;
@@ -515,8 +530,19 @@ background-color: rgba(207, 18, 18, 0.8);
   float: left;
   margin-top: 100px;
   height: 15rem;
-  background-color: rgb(189, 189, 252);
   width: 100%;
+text-align: center;
+  
+}
+
+#footer .footer_box{
+  text-align: center;
+  line-height: 60px;
+}
+
+#footer .footer_box img{
+  width: 228px;
+  height: 71px;
 }
 
 /******************슬라이드********************/
