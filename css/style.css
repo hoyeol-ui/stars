@@ -1,0 +1,538 @@
+.inner{max-width:1280px;min-width:1024px;margin:0 auto;}
+h2{font-size:1.875rem;}
+h3{font-size:1rem;}
+
+
+#header{}
+#wrap{
+  width: 100%;
+  min-width: 1024px;
+  overflow: hidden;
+}
+#section{}
+
+
+
+.slider {
+    width: 100%; min-width: 1024px;
+    margin: 100px auto;
+    padding: 0;
+}
+
+.slick-slide {
+  margin: 0px 
+}
+
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+
+
+
+.slick-current {
+  opacity: 1;
+}
+
+
+
+.popup{width:100%;min-width:1024px;height:200px;display: none;}
+.popup img{width:100%}
+.sitemap_div{width:100%;min-width:1024px;}
+.site_full{
+  position:fixed;
+  top:0;left:0;
+  height:100%;
+  width:100%;
+  background:rgba(0,0,0,0.8);
+  z-index:10;
+  display: none;
+  font-size: 5rem;
+
+}
+
+
+#quick{
+  width: 100px;
+  height: 200px;
+  position: fixed; 
+  right: 150px;
+  top: 300px; 
+  z-index: 99999;}
+
+#quick ul{
+width: 100px;
+height: 500px;
+text-align: center;
+list-style: none; 
+margin-bottom: 15px;
+background-color: rgba(207, 18, 18, 0.8);
+       }
+#quick ul li{
+ padding: 24px 10px;
+ font-size: 1.1rem;
+ font-weight: 800;
+ background-color: rgba(207, 18, 18, 0.8);}
+
+#quick ul li:last-child{padding: 35px 10px;}
+
+/*********************header****************************/
+
+
+
+
+#header:after{clear: both;}
+#header .inner{position: relative;}
+#header .logo {
+  width:200px;
+  float:left;}
+#header .logo img {width:100%}
+#header .header_top{width:calc(100% - 250px);
+                  float:left;
+                  text-align: right;}
+#header .language {
+                   display: inline-block;
+                   position: relative;
+                   width:11rem;
+                   height: 2rem;
+                   text-align: center;/**/
+                   border: 2px solid #333;
+                   cursor: pointer; 
+                  }
+#header .language ul{position:absolute;
+                    top:2rem;left:-1.8px;
+                    width:11rem;
+                    text-align: center;}
+#header .language ul li{
+  width: 11rem; 
+  height: 2rem;
+  line-height: 2rem;
+  border-bottom: 2px solid #333;}
+#header .language ul li:last-child{
+  border: none;
+}
+#header .korean{
+  float: left;
+  padding-left: 37%;
+  line-height: 2rem;
+  background: none;
+  font-size: 1rem;
+}
+#header .language .arrow_d{
+  float: right;
+  padding-top: 5px;
+}
+
+.rolling_box{
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+}
+
+.rolling_box1{
+  width: 650px;
+  height: 40px;
+  float: left;
+  clear: both;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 1.2rem;
+  overflow: hidden;
+  line-height: 40px;
+  color: #fff;
+
+}
+.rolling_box2{
+  width: 630px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 1.2rem;
+  overflow: hidden;
+  line-height: 40px;
+  color: #fff;
+}
+
+
+
+.popup_open{
+  position:absolute;
+  top:0;right:0;
+  width:2rem;
+  cursor: pointer;}
+
+.sub_con{display: none;}
+
+#header #nav{width:calc(100% - 250px);float:left;
+             position: relative;} 
+#header #nav .depth1 > li {float:left; padding-left:50px;}
+#header #nav .depth1 > li > a {
+             display: block;
+             line-height: 60px;}
+
+#header #nav .depth2 > ul{}
+#header #nav .depth2 > li{margin-bottom: 2rem; display: none;}
+/*********************section****************************/
+
+#section1{
+  width: 100%;
+  position: relative;
+}
+
+#section1 .lazy div{
+  width: 100%;
+}
+
+#section2{
+  clear: both;
+  margin-top: 220px;
+}
+#section2 h2{
+  margin-bottom: 100px;
+}
+
+#section2 .sec2_box{
+  text-align: center;
+}
+#section2 .sec2_box h5{
+  font-size: 1.5rem;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#section2 .sec2_box img{
+  width: 160px;
+  height: 140px;
+  margin-bottom: 5%;
+}
+#section2 .inner > div{
+            position: relative;
+            float:left;
+            width:33.333%;
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            box-sizing: border-box;
+            padding-bottom: 100px;}
+#section2 .inner > div:last-child{
+            border-right: 1px solid #ccc;
+}
+#section2 .inner > div a{
+    display:block;
+    padding-top: 50px;
+    height:320px;
+    box-sizing:border-box;
+}
+#section2 .text_on{
+  display: none;/* transition:0.5s; opacity:0 부드러운 효과 */}
+#section2 .img_box{
+  width: 250px;
+  display: none;
+ }
+#section2 div a:hover .text_on{
+  display: block;/* opacity:1 애는 자리차지해서 margin을 쓴 것 처럼되서 조심해서 쓰자*/
+}
+#section2 div a:hover .img_box{
+  display: block;
+  width: 100%;
+}
+#section2 div a:hover .text_off, #section2 div a:hover .img_off{
+  display: none;
+}
+
+
+
+/*********  박스테두리  ************/
+/* 1.테두리만 있는 네모를 두개 만든다. 위쪽 오른쪽, 아래쪽 왼쪽
+   2. 포지션으로 겹쳐놓는다.
+   3. 효과를 준다 */
+   
+#section2 .inner div :before{
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 0%;
+  height: 0%;
+
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transition: 0s;}
+
+
+#section2 .inner div a:hover:before,
+#section2 .inner div a:focus:before{
+   border-color: #ef4b49;
+   width: 100%;
+   height: 100%; 
+   transition: width .4s, height 0.4s 0.4s;
+}
+
+
+#section2 .inner div :after{
+  content: '';
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 0%;
+  height: 0%;
+
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transition: 0s;}
+
+
+#section2 .inner div a:hover:after,
+#section2 .inner div a:focus:after{
+   border-color: #ef4b49;
+   width: 100%;
+   height: 100%; 
+   transition: width .4s, height 0.4s 0.4s;
+}
+
+#section2 .inner h2{
+  text-align: center;
+}
+#section2 .inner h3{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+
+#section3{
+    clear: both;
+    padding-top: 200px;
+    padding-bottom: 200px;}
+
+#section3 .inner h2{
+      text-align: center;
+      margin-bottom: 50px;
+    }
+#section3 .inner h3{
+      text-align: center;
+      margin-bottom: -10px;
+    }
+
+#section4{
+  clear: both;
+  padding: 10px 0;}
+
+.sec4_tit{
+  float: left;
+  width: 255px;
+  margin-right: 10px;}/*퍼센트와 픽셀을 같이 써도 된다.*/
+
+.sec4_tit img{
+  width: 100%;
+}
+  
+.sec4_slide{
+  position: relative;
+  width: calc(100% - 280px);
+  float: left;
+ }
+
+.sec4_slide h2{
+  padding-left: 50px;}
+
+#section5{
+  float: left;
+  margin-top: 200px;
+  padding-bottom: 200px;
+  width: 100%;
+}
+
+.youtube{
+  margin-left: 20%;
+}
+
+#section6{
+  float: left;
+  width: 100%;
+  margin-top: 100px;
+  padding-bottom: 200px;
+}
+
+#section6 .inner h2{
+  text-align: center;
+  margin-bottom: 100px;
+}
+#section6 .inner h3{
+  text-align: center;
+  margin-bottom: 50px;
+}
+#section6 .sec6_box{
+  text-align: center;
+} 
+
+#section6 .sec6_box p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+#section6 .sec6_box span{
+   
+  font-size: 1.2rem;
+}
+
+#section6 .sec6_box1{
+  position: relative;
+  float:left;
+  width:31%;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  padding-bottom: 100px;
+ }
+#section6 .sec6_box1 img{
+  width: 100%;
+}
+#section6 .sec6_box2{
+  position: relative;
+  float:left;
+  width:31%;
+  margin-right: 30px;
+  border: 1px solid #ccc;
+  padding-bottom: 100px;
+}
+#section6 .sec6_box2 img{
+  width: 100%;
+}
+#section6 .sec6_box3{
+  position: relative;
+  float:left;
+  width:31%;
+  border: 1px solid #ccc;
+  padding-bottom: 100px;
+}
+#section6 .sec6_box3 img{
+  width: 100%;
+}
+
+
+/*********************footer****************************/
+
+#footer{
+  float: left;
+  margin-top: 100px;
+  height: 15rem;
+  background-color: rgb(189, 189, 252);
+  width: 100%;
+}
+
+/******************슬라이드********************/
+
+
+
+.slick-arrow{
+  position: absolute;
+  top:40%;
+  width: 64px; 
+  height: 64px;
+  background: none;
+  display: block;
+  text-indent: -999999999999px;
+  z-index: 99999;}
+.slick-prev{
+  left: 50px;
+  background-image: url(../images/arrow_l.png);
+} 
+.slick-next{
+  background-image: url(../images/arrow_r.png);
+  right: 50px;
+} 
+.slick-dots{position: absolute;
+            bottom:-20px;
+            width: 100%;
+            text-align: center;
+          }
+
+.slick-dots li{
+  display: inline-block;
+  margin-right: 20px;}
+.slick-dots li button{
+    display: block;
+    text-indent: -9999999px;
+    width: 80px;
+    height: 5px;
+    border: none;
+    background-color: rgba(0,0,0.5);
+    color: #fff;
+}
+
+.slick-dots li.slick-active button{
+   color: #fff;
+}
+
+.slick-dots li button::before{
+      content: ''; display: block;
+      width: 0; height: 100%;
+      background-color: red; 
+      transition: 0.5s; 
+}
+
+.slick-dots li.slick-active button::before{
+      width: 100%; 
+      transition: 0.5s;
+}/* width와 transition을 사용해서 버튼의 색깔을 변하게 만들 수 있다. */
+
+.regular .slick-slide {
+     width: 100%;
+     margin: 0 10px;
+     z-index: 99999999999;
+}
+
+.regular .slick-arrow{
+
+  width: 64px; 
+  height: 64px;
+  background: none;
+  display: block;
+  text-indent: -999999999999px;}
+
+.regular div{z-index: 99999;} 
+  
+.regular .slick-prev{
+    left: -25px;
+    background-image: url(../images/arrow_l.png);
+    z-index: 1;
+  } 
+.regular .slick-next{
+    background-image: url(../images/arrow_r.png);
+    right: -25px;
+    z-index: 1;
+  } 
+
+
+.regular .slick-slide img{
+  width: 100%; 
+}
+
+
+.regular2 .slick-slide {
+  width: 100%;
+  margin: 0 22px;
+}
+
+.regular2 .slick-arrow{
+  position: absolute;
+  top:-80px;
+  z-index:9999;
+  width:64px;
+  height:64px;
+  display:block;
+  text-indent:-9999px;}
+.regular2 .slick-prev{
+  left:30px;
+  background-image: url(../images/arrow_l.png);}
+.regular2 .slick-next{
+  left:130px;
+  right:auto;
+  background-image: url(../images/arrow_r.png);}
+/* !important(제이쿼리, css 다 이기는 태그지만 가급적 사용하지 않도록 하자) */
+
+
+
