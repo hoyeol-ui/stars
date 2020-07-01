@@ -3,7 +3,7 @@ h2{font-size:1.875rem;}
 h3{font-size:1rem;}
 
 
-#header{}
+#header{padding-top: 30px;}
 
 #wrap{
   width: 100%;
@@ -41,22 +41,23 @@ h3{font-size:1rem;}
 
 
 .popup{
-  width:calc(50% - 1000px);
   min-width:100%;
-  height:200px;
-  position: relative;
   display: block;
   overflow: hidden;
  }
 .pop_close{
   position: absolute;
-  top: 1px;
-  right: 8px;
-  font-size: 7rem;
-  color: #333;
+  top: 30px;
+  right: 50px;
+  font-size: 3rem;
+  color: #fff;
   cursor: pointer;
 }  
-.popup img{width:2000px}
+.popup img{
+  position: relative;
+  width:calc(50% - 1000px);
+  min-width: 100%;
+}
 .sitemap{
   cursor: pointer;
   font-size: 1rem;
@@ -81,17 +82,22 @@ h3{font-size:1rem;}
 
 .sitemap_close{
   font-size: 3rem;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .sitemap_txt{
-  max-width: 1280px;
+  min-width: 1080px;
+  max-width: 100%;
   margin: 0 auto;
   font-size: 1rem;
 }
 
-.sitemap_txt span{
+
+.sitemap_txt h2{
   font-size: 2rem;
   font-weight: 900;
+  margin-bottom: 20px;
 }
 
 .sitemap_box{
@@ -125,14 +131,14 @@ h3{font-size:1rem;}
   z-index: 1;}
 
 #quick ul{
-width: 100px;
+width: 80px;
 height: 500px;
 text-align: center;
 list-style: none; 
 margin-bottom: 15px;
        }
 #quick ul li{
- padding: 24px 10px;
+ padding: 10px 10px;
  font-size: 1.1rem;
  font-weight: 800;}
 
@@ -159,19 +165,20 @@ margin-bottom: 15px;
                    display: inline-block;
                    position: relative;
                    right: 30px;
-                   width:11rem;
+                   width:8rem;
                    height: 2rem;
+                   font-size: 0.8rem;
                    text-align: center;/**/
-                   border: 1px solid #ccc;
+                   border-bottom: 1px solid #ccc;
                    cursor: pointer; 
                    z-index: 99999;
                   }
 #header .language ul{position:absolute;
                     top:2rem;left:-1px;
-                    width:11rem;
+                    width:8rem;
                     text-align: center;}
 #header .language ul li{
-  width: 11rem; 
+  width: 8rem; 
   height: 2rem;
   line-height: 2rem;
   background-color: #fff;
@@ -183,9 +190,9 @@ margin-bottom: 15px;
 #header .korean{
   float: left;
   padding-left: 33%;
-  line-height: 2rem;
+  line-height: 2.7rem;
   background: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 #header .language .arrow_d{
   float: right;
@@ -200,23 +207,23 @@ margin-bottom: 15px;
 
 .rolling_box1{
   width: 650px;
-  height: 40px;
+  height: 60px;
   float: left;
   clear: both;
   background-color: rgba(0, 0, 0, 0.8);
   font-size: 1.2rem;
   overflow: hidden;
-  line-height: 40px;
+  line-height: 60px;
   color: #fff;
 
 }
 .rolling_box2{
-  width: 630px;
-  height: 40px;
+  width: 650px;
+  height: 60px;
   background-color: rgba(0, 0, 0, 0.8);
   font-size: 1.2rem;
   overflow: hidden;
-  line-height: 40px;
+  line-height: 60px;
   color: #fff;
 }
 
@@ -225,8 +232,12 @@ margin-bottom: 15px;
 .popup_open{
   position:absolute;
   top:0;right:0;
-  width:2rem;
+  width:12rem;
   cursor: pointer;}
+
+.popup_open img{
+  width: 60px;
+}
 
 .sub_con{display: none;}
 
@@ -264,6 +275,12 @@ margin-bottom: 15px;
   line-height: 35px;
   color: #fff;}   
 #header #nav .depth1 ul li:last-child {background:none}
+
+#header .nav_btn{float: right; background: none; border: none;
+  transform: translate(-20px,20px);}/* 자리옮길때는 트랜스폼 활용하자 */
+#header .nav_btn span{display: block; width: 30px; height: 5px;
+       margin-bottom: 3px; background-color: #333;
+       border-radius: 3px;}
 /*********************section****************************/
 
 #section1{
@@ -287,6 +304,7 @@ margin-bottom: 15px;
 }
 
 #section2 h2{
+  color: #333;
   margin-bottom: 60px;
 }
 
@@ -496,6 +514,7 @@ margin-bottom: 15px;
 }
 
 #section3 .inner h2{
+      color: #333;
       text-align: center;
       margin-bottom: 30px;
     }
@@ -531,6 +550,7 @@ margin-bottom: 15px;
  }
 
 .sec4_slide h2{
+  color: #333;
   padding-left: 50px;
  padding-bottom: 20px;}
 
@@ -538,7 +558,7 @@ margin-bottom: 15px;
   margin-top: 110px;
   width: 100%;
   position: relative;
-  z-index: 99999;
+  
 }
 
 #section5::after{
@@ -560,6 +580,7 @@ width: 1920px;
 }
 
 #section6 .inner h2{
+  color: #333;
   text-align: center;
   margin-bottom: 30px;
 }
@@ -590,6 +611,8 @@ width: 1920px;
   margin-right: 30px;
   border: 1px solid #ccc;
   padding-bottom: 50px;
+  font-family: '나눔스퀘어';
+  color: #333;
  }
 #section6 .sec6_box1 img{
   width: 100%;
@@ -601,6 +624,8 @@ width: 1920px;
   margin-right: 30px;
   border: 1px solid #ccc;
   padding-bottom: 50px;
+  font-family: '나눔스퀘어';
+  color: #333;
 }
 #section6 .sec6_box2 img{
   width: 100%;
@@ -609,6 +634,8 @@ width: 1920px;
   position: relative;
   float:left;
   width:31%;
+  font-family: '나눔스퀘어';
+  color: #333;
   border: 1px solid #ccc;
   background-color: #fff;
   padding-bottom: 50px;
@@ -624,15 +651,16 @@ width: 1920px;
 #footer{
   float: left;
   margin-top: 100px;
-  height: 15rem;
+  padding-top: 20px;
   width: 100%;
-text-align: center;
+ text-align: center;
+ border-top: 1px solid #ccc;
   
 }
 
 #footer .footer_box{
   text-align: center;
-  line-height: 60px;
+  line-height: 40px;
 }
 
 #footer .footer_box img{
@@ -662,7 +690,7 @@ text-align: center;
   right: 50px;
 } 
 .slick-dots{position: absolute;
-            bottom:-20px;
+            bottom:-30px;
             width: 100%;
             text-align: center;
           }
@@ -687,7 +715,7 @@ text-align: center;
 .slick-dots li button::before{
       content: ''; display: block;
       width: 0; height: 100%;
-      background-color: red; 
+      background-color: #ef4b49; 
 }
 
 .slick-dots li.slick-active button::before{

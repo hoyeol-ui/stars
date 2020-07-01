@@ -38,7 +38,7 @@ $(function(){
 
       
 
-      $('.sitemap').click(function(){
+      $('.nav_btn').click(function(){
  
          $('.site_full').fadeIn(1000);
     
@@ -148,7 +148,7 @@ $(function(){
               })
 
               $(window).scroll(function(){
-                if($(document).scrollTop()<=700){
+                if($(document).scrollTop()<=350){
                   $('#quick').stop().animate({top:1200},500);
                  } else{
                   $('#quick').stop().animate({top:200},500);
