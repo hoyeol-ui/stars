@@ -72,7 +72,8 @@ h3{font-size:1rem;}
   height:100%;
   width:100%;
   background:rgb(255, 255, 255);
-  z-index:999999999;
+  background-image: url(../images/sitemap.jpg);
+  z-index:9999999999999999;
   display: none;
   font-size: 1rem;
   color: rgb(0, 0, 0);
@@ -95,8 +96,11 @@ h3{font-size:1rem;}
 
 .sitemap_box{
   float: left;
+  margin-right: 20px;
+  margin-top: 10px;
   width: 30%;
   height: 400px;
+  background-color: #fff;
   border: 1px solid #ccc;
   padding: 20px;
   box-sizing: border-box;
@@ -160,7 +164,7 @@ margin-bottom: 15px;
                    text-align: center;/**/
                    border: 1px solid #ccc;
                    cursor: pointer; 
-                   z-index: 9999999999;
+                   z-index: 99999;
                   }
 #header .language ul{position:absolute;
                     top:2rem;left:-1px;
