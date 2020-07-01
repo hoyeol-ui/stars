@@ -25,7 +25,7 @@ $(function(){
       $(".regular2").slick({
         dots: false,
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: 2,
         slidesToScroll: 2,
         autoplay:true,
         autoplaySpeed:3000,
@@ -33,7 +33,7 @@ $(function(){
 
 
     $(".language").click(function(){
-       $(".sub_con").slideToggle().css({'border':'2px solid #333'});
+       $(".sub_con").slideToggle().css({'border':'1px solid #ccc'});
       });
 
       
@@ -55,13 +55,6 @@ $(function(){
         $(".popup").css('display','none');
        });
 
-       $('.depth1 > li').mouseover(function(){
-         $('.depth2 > li').stop().slideDown(500)
-       });
-
-       $('#nav').mouseleave(function(){
-        $('.depth2 > li').stop().slideUp(500)
-      });
 
 
             $('#notice_rolling1').vTicker({   
@@ -105,6 +98,7 @@ $(function(){
               $('.img1_off').hide()
               $('.sec2_box1 > .sec2_btn').css({'background-color':'#ef4b49','color':'#fff'})
               $('.sec2_box1 > .sec2_txt1_on').css({'display':'block'})
+              $('.sec2_box1 .sec2_txt1').css({'display':'none'})
             });
 
             $('.sec2_box1').mouseleave(function(){
@@ -112,33 +106,59 @@ $(function(){
               $('.img1_off').show()
               $('.sec2_box1 > .sec2_btn').css({'background-color':'white','color':'#333'})
               $('.sec2_box1 > .sec2_txt1_on').css({'display':'none'})
+              $('.sec2_box1 .sec2_txt1').css({'display':'block'})
             });
 
             $('.sec2_box2').mouseover(function(){
               $('.sec2_txt2_on').show()
               $('.img2_off').hide()
               $('.sec2_box2 > .sec2_btn').css({'background-color':'#ef4b49','color':'#fff'})
+              $('.sec2_box2 .sec2_txt2').css({'display':'none'})
             });
 
             $('.sec2_box2').mouseleave(function(){
               $('.sec2_txt2_on').hide()
               $('.img2_off').show()
               $('.sec2_box2 > .sec2_btn').css({'background-color':'white','color':'#333'})
+              $('.sec2_box2 .sec2_txt2').css({'display':'block'})
             });
 
             $('.sec2_box3').mouseover(function(){
               $('.sec2_txt3_on').show()
               $('.img3_off').hide()
               $('.sec2_box3 > .sec2_btn').css({'background-color':'#ef4b49','color':'#fff'})
+              $('.sec2_box3 .sec2_txt3').css({'display':'none'})
             });
 
             $('.sec2_box3').mouseleave(function(){
               $('.sec2_txt3_on').hide()
               $('.img3_off').show()
               $('.sec2_box3 > .sec2_btn').css({'background-color':'white','color':'#333'})
+              $('.sec2_box3 .sec2_txt3').css({'display':'block'})
             });
 
 
+            $(window).scroll(function(){
+              if($(document).scrollTop()>=90){
+                $('#quick').stop().animate({top:1200},500);
+               } else{
+                $('#quick').stop().animate({top:200},500);
+               }
+              
+              })
 
+              $(window).scroll(function(){
+                if($(document).scrollTop()<=700){
+                  $('#quick').stop().animate({top:1200},500);
+                 } else{
+                  $('#quick').stop().animate({top:200},500);
+                 }
+                
+                })
+
+            //팝업창 닫기
+            $('.pop_close').click(function(){
+                $('.pop').fadeOut(300);
+            })
 
 })

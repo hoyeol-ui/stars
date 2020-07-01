@@ -4,18 +4,17 @@ h3{font-size:1rem;}
 
 
 #header{}
+
 #wrap{
   width: 100%;
   min-width: 1024px;
   overflow: hidden;
 }
-#section{}
-
 
 
 .slider {
     width: 100%; min-width: 1024px;
-    margin: 100px auto;
+    margin: 10px auto;
     padding: 0;
 }
 
@@ -42,12 +41,24 @@ h3{font-size:1rem;}
 
 
 .popup{
-  width:100%;
-  min-width:1024px;
+  width:calc(50% - 1000px);
+  min-width:100%;
   height:200px;
-  display: block;}
-.popup img{width:100%}
+  position: relative;
+  display: block;
+  overflow: hidden;
+ }
+.pop_close{
+  position: absolute;
+  top: 1px;
+  right: 8px;
+  font-size: 7rem;
+  color: #333;
+  cursor: pointer;
+}  
+.popup img{width:2000px}
 .sitemap{
+  cursor: pointer;
   font-size: 1rem;
   position: absolute;
   top: 0;
@@ -56,19 +67,48 @@ h3{font-size:1rem;}
 .sitemap_div{width:100%;min-width:1024px;}
 .site_full{
   position:fixed;
-  top:0;left:0;
+  top:0;
+  left:0;
   height:100%;
   width:100%;
-  background:rgba(0,0,0,0.8);
-  z-index:99999999999;
+  background:rgb(255, 255, 255);
+  z-index:999999999;
   display: none;
-  font-size: 5rem;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
 }
+
+.sitemap_close{
+  font-size: 3rem;
+}
+
+.sitemap_txt{
+  max-width: 1280px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.sitemap_txt span{
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.sitemap_box{
+  float: left;
+  width: 30%;
+  height: 400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-sizing: border-box;
+  line-height: 40px;
+}
+
+
+
 
 .popup_open{
   width: 120px;
-  background-color: rgb(230, 230, 230);
-  color: #000;
+  color: #333;
 }
 
 
@@ -86,8 +126,6 @@ height: 500px;
 text-align: center;
 list-style: none; 
 margin-bottom: 15px;
-color: #fff;
-background-color: rgb(11, 74, 190);
        }
 #quick ul li{
  padding: 24px 10px;
@@ -95,14 +133,12 @@ background-color: rgb(11, 74, 190);
  font-weight: 800;}
 
 #quick ul li:last-child{
-  padding: 35px 10px;}
+  padding: 15px 10px;}
 #quick ul li img{
-  width: 50px;
-  height: 50px;
+  width: 100%;
 }
 
 /*********************header****************************/
-
 
 
 
@@ -122,18 +158,21 @@ background-color: rgb(11, 74, 190);
                    width:11rem;
                    height: 2rem;
                    text-align: center;/**/
-                   border: 2px solid #333;
+                   border: 1px solid #ccc;
                    cursor: pointer; 
+                   z-index: 9999999999;
                   }
 #header .language ul{position:absolute;
-                    top:2rem;left:-1.8px;
+                    top:2rem;left:-1px;
                     width:11rem;
                     text-align: center;}
 #header .language ul li{
   width: 11rem; 
   height: 2rem;
   line-height: 2rem;
-  border-bottom: 2px solid #333;}
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  }
 #header .language ul li:last-child{
   border: none;
 }
@@ -152,7 +191,7 @@ background-color: rgb(11, 74, 190);
 .rolling_box{
   width: 100%;
   position: absolute;
-  bottom: 5px;
+  bottom: 15px;
 }
 
 .rolling_box1{
@@ -189,19 +228,43 @@ background-color: rgb(11, 74, 190);
 
 #header #nav{width:calc(100% - 250px);float:left;
              position: relative;} 
-#header #nav .depth1 > li {float:left; padding-left:50px;}
+
+
+#header #nav .depth1 ul {
+    background-color:rgba(0, 0, 0, 0.719);
+    width:100%;
+    margin-top: 20px;
+    padding:20px 0;
+    position: absolute;
+    left:0;
+    top:50px;
+    display:none;
+    z-index: 9999999;
+   } 
+           
+#header #nav .depth1 > li {
+  float:left;
+  padding-left:50px;
+}
+
 #header #nav .depth1 > li > a {
              display: block;
              line-height: 60px;}
 
-#header #nav .depth2 > ul{}
-#header #nav .depth2 > li{margin-bottom: 2rem; display: none;}
+#header #nav .depth1 > li:hover ul{display: block;}        
+
+#header #nav .depth1 ul li{
+  display:inline-block;
+  padding:0 30px;
+  width: 150px;
+  line-height: 35px;
+  color: #fff;}   
+#header #nav .depth1 ul li:last-child {background:none}
 /*********************section****************************/
 
 #section1{
   width: 100%;
   position: relative;
-  z-index: 9999999;
 }
 
 #section1 .lazy div{
@@ -209,11 +272,18 @@ background-color: rgb(11, 74, 190);
 }
 
 #section2{
-  clear: both;
-  margin-top: 220px;
+  margin-top: 110px;
+  margin-bottom: 110px;
 }
+
+#section2::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
 #section2 h2{
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
 #section2 .sec2_box1{
@@ -227,17 +297,29 @@ background-color: rgb(11, 74, 190);
   text-align: center;
 }
 #section2 .sec2_box1 h5{
+  text-align: center;
   font-size: 1.5rem;
+  font-family: '나눔스퀘어';
+  font-weight: 800;
+  color: #333;
   margin-top: 5%;
   margin-bottom: 5%;
 }
 #section2 .sec2_box2 h5{
+  text-align: center;
   font-size: 1.5rem;
+  font-family: '나눔스퀘어';
+  color: #333;
+  font-weight: 800;
   margin-top: 5%;
   margin-bottom: 5%;
 }
 #section2 .sec2_box3 h5{
+  text-align: center;
   font-size: 1.5rem;
+  font-family: '나눔스퀘어';
+  color: #333;
+  font-weight: 800;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -284,6 +366,7 @@ background-color: rgb(11, 74, 190);
   font-weight: 500;
 }
 
+
 #section2 .sec2_txt2{
   font-size: 1.1rem;
   font-weight: 500;
@@ -305,11 +388,11 @@ background-color: rgb(11, 74, 190);
   display: none;
   position: absolute;
   top: 30%;
-  left: 23.5%;
+  left: 26.5%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #333;
-  font-weight: 600;
+  font-weight: 300;
   line-height: 40px;
 }
 
@@ -317,11 +400,11 @@ background-color: rgb(11, 74, 190);
   display: none;
   position: absolute;
   top: 30%;
-  left: 21.5%;
+  left: 24.5%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #333;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 40px;
 }
 
@@ -329,11 +412,11 @@ background-color: rgb(11, 74, 190);
   display: none;
   position: absolute;
   top: 30%;
-  left: 21.5%;
+  left: 23.5%;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #333;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 40px;
 }
 
@@ -375,11 +458,11 @@ background-color: rgb(11, 74, 190);
   bottom: 0px;
   width: 0%;
   height: 0%;
-
   border-bottom: 4px solid transparent;
   border-left: 4px solid transparent;
   box-sizing: border-box;
-  transition: 0s;}
+  transition: 0s;
+ }
 
 
 #section2 .inner > div:hover:after,
@@ -400,26 +483,37 @@ background-color: rgb(11, 74, 190);
 
 
 #section3{
-    clear: both;
-    padding-top: 200px;
-    padding-bottom: 200px;}
+    margin-top: 110px;}
+
+#section3::after{
+  content: '';
+  display: block;
+  clear: both;
+}
 
 #section3 .inner h2{
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
     }
 #section3 .inner h3{
       text-align: center;
       margin-bottom: -10px;
+      font-weight: 500;
     }
 
 #section4{
-  clear: both;
+  margin-top: 110px;
   padding: 10px 0;}
+
+#section4::after{
+  content: '';
+  display: block;
+  clear: both;
+}
 
 .sec4_tit{
   float: left;
-  width: 255px;
+  width: 270px;
   margin-right: 10px;}/*퍼센트와 픽셀을 같이 써도 된다.*/
 
 .sec4_tit img{
@@ -433,26 +527,37 @@ background-color: rgb(11, 74, 190);
  }
 
 .sec4_slide h2{
-  padding-left: 50px;}
+  padding-left: 50px;
+ padding-bottom: 20px;}
 
 #section5{
-  float: left;
-  margin-top: 200px;
-  padding-bottom: 200px;
+  margin-top: 110px;
   width: 100%;
+  position: relative;
+  z-index: 99999;
 }
-#section5 iframe{z-index: 999999;}
+
+#section5::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.youtube_back{
+  height: 680px;
+  width:calc(50% - 1000px);
+  position: relative;
+}
+.youtube_back img{
+width: 1920px;
+}
 
 #section6{
-  float: left;
-  width: 100%;
-  margin-top: 100px;
-  padding-bottom: 200px;
+  margin-top: 220px;
 }
 
 #section6 .inner h2{
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 }
 #section6 .inner h3{
   text-align: center;
@@ -579,7 +684,6 @@ text-align: center;
       content: ''; display: block;
       width: 0; height: 100%;
       background-color: red; 
-      transition: 0.5s; 
 }
 
 .slick-dots li.slick-active button::before{
@@ -587,9 +691,16 @@ text-align: center;
       transition: 0.5s;
 }/* width와 transition을 사용해서 버튼의 색깔을 변하게 만들 수 있다. */
 
+
+.regular .slick-dots{position: absolute;
+  bottom:30px;
+  width: 100%;
+  text-align: center;
+}
+
 .regular .slick-slide {
      width: 100%;
-     margin: 0 10px;
+     margin: 50px 10px;
      z-index: 99999999999;
 }
 
@@ -605,11 +716,11 @@ text-align: center;
   
 .regular .slick-prev{
     left: -58px;
-    background-image: url(../images/arrow_l2.png);
+    background-image: url(../images/arrow_l.png);
     z-index: 1;
   } 
 .regular .slick-next{
-    background-image: url(../images/arrow_r2.png);
+    background-image: url(../images/arrow_r.png);
     right: -58px;
     z-index: 1;
   } 
@@ -622,26 +733,26 @@ text-align: center;
 
 .regular2 .slick-slide {
   width: 100%;
-  margin: 0 22px;
+  margin: 60px 12px;
 }
 
 .regular2 .slick-arrow{
   position: absolute;
-  top:-80px;
+  top:1px;
   z-index:9999;
-  width:50px;
-  height:50px;
+  width:40px;
+  height:40px;
   display:block;
   text-indent:-9999px;}
 .regular2 .slick-prev{
-  left:40px;
-  background-image: url(../images/arrow_l2.png);
+  left:50px;
+  background-image: url(../images/arrow_l.png);
   background-size: cover;}
 .regular2 .slick-next{
   left:100px;
   right:auto;
   background-size: cover;
-  background-image: url(../images/arrow_r2.png);}
+  background-image: url(../images/arrow_r.png);}
 /* !important(제이쿼리, css 다 이기는 태그지만 가급적 사용하지 않도록 하자) */
 
 
